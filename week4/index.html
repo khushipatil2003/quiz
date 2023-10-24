@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1 id="quiz-label">Quiz</h1>
+        <div id="name-input">
+            <input type="text" id="username" placeholder="Enter your name" size="50">
+            <br>
+            <button onclick="startQuiz()">Start Quiz</button><br>
+            <button id="show-leaderboard" onclick="displayLeaderboard()">Leaderboard</button>
+        </div>
+        <div id="quiz" style="display:none;">
+            <div id="greet"></div> <!-- Added to display greeting -->
+            <div id="question"></div>
+            <div id="options"></div>
+            <button id="next" onclick="nextQuestion()" style="display:none;">Next</button>
+            <form onsubmit="submitQuiz(event)">
+                <button type="submit" id="submit" style="display:none;">Submit</button>
+            </form>
+            <div id="correct-answer" style="display: none;"></div>
+        </div>
+
+        <div id="result" style="display:none;"></div>
+        <div id="correct-answers" style="display:none;"></div>
+        <div id="score" style="display:none;"></div> <!-- Added to display score -->
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
+
+

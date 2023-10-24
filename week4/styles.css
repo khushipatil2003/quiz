@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("image4.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.quiz-container {
+    width: 50%;
+    height: 400px;
+    margin: 0 auto; /* Center the container horizontally */
+background-color: rgba(255, 255, 255, 0.8); /* Background color for the outer box */
+    border-radius: 15px; /* Border radius for rounded corners */
+    padding: 20px; /* Padding inside the outer box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle depth effect */
+}
+
+.quiz-container h1 {
+    margin: 0;
+    font-size: 40px;
+    color: #0e0b0b;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+input[type="text"] {
+    margin:0;
+    margin-top: 20px;
+    width: auto;
+    padding: 5px 10px;
+    height: 40px;
+    font-size: 20px;
+}
+button {
+    margin:0;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-image: linear-gradient(to right, rgb(116, 21, 175), rgb(30, 15, 13), rgb(41, 67, 98));
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #45a049;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+#correct-answers {
+    max-height: 300px; 
+    overflow-y: auto; 
+    border: 1px solid #ccc; 
+    padding: 10px;
+ display: inline-block; /* Display as inline-block to fit content */
+    background-color: rgba(255, 255, 255, 0.8); /* Match background color */
+    padding: 10px; /* Add padding */
+    border-radius: 5px; /* Add rounded corners */
+    margin-top: 10px; /* Adjust margin for spacing */
+    max-width: 100%; /* Ensure it doesn't exceed the container's width */
+    box-sizing: border-box; /* Include padding in element's total width */
+}
+
+#leaderboard {
+    max-height: none;
+}
+
+#correct-answers p, #leaderboard p {
+    margin: 0;
+}
+
+#correct-answers p:nth-child(even), {
+    background-color: #f9f9f9;
+}
+
+#leaderboard h2 {
+    margin-top: 0;
+    color:#fff;
+}
+#correct-answers h2{
+ margin-top: 0;
+}
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.leaderboard-table th, .leaderboard-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    color:#fff;
+}
+
+.leaderboard-table th {
+    background-color:#20f2cf;
+}
+
+#question {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+
+#options label {
+    display: block;
+    margin-top: 5px;
+    font-size: 1em; /* Set the font size to make the options smaller */
+    padding-left: 30px; /* Add some space to the left to accommodate radio buttons */
+    position: relative; /* Position relative for absolute positioning of radio buttons */
+}
+
+#options input[type="radio"] {
+    position: absolute; /* Position radio buttons absolutely */
+    top: 0; /* Align radio buttons to the top */
+    left: 0; /* Align radio buttons to the left */
+}
+
+
+
+/* Style for true/false options */
+#options label input[type="radio"] {
+    margin-right: 5px;
+    transform: scale(1.5); /* Make the radio button bigger for better visibility */
+}
+
+
+#options input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
